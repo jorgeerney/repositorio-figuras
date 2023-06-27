@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("D:/Documentos/figuras/img/22.jpeg");
+    
+}
+
+section{
+    width: 90%;
+    height: 750px;
+    margin: 120px auto;
+    display: flex;
+    /*align-items: center; /*Propiedades propias de display flex */
+    justify-content: center;
+}
+
+.cont-botones{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: 4px solid white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.cont-figura{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: black;
+}
+
+h2{
+    color: rgb(3, 64, 246);
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font: 200;
+    
+}
+
+.cont-botones button{
+    background: white;
+    color: black;
+    padding: 12px 30px;
+    border: 1px solid aqua;
+    margin: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.cont-botones button:hover{
+    transform: scale(1.2);
+    background: transparent;
+    color: white;
+}
+
+.cont-figura #figura{
+    width: 369px;
+    height: 369px;
+    background:black;
+    margin: 40px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#figura.rectangulo{
+    width: 738px;
+    background: black;
+    transition: 1s;
+}
+
+#figura.degrade{
+    background: linear-gradient( rgb(184, 16, 16), rgb(39, 10, 10),white);
+    transition: 1s;
+}
+
+#figura.animacion{
+    background-image: url("../img/eyedesyn-01.webp");
+}
+
+#figura.mtop{
+    transform: translateY(-100px);
+}
+
+#figura.mdown{
+    transform: translateY(100px);
+}
+
+#figura.mlefth{
+    transform: translateX(-100px);
+}
+
+#figura.mrigth{
+    transform: translateX(100px);
+}
+
+#figura.mdiagonal{
+    transform: translate(100px, 100px);
+}
+
+#figura.animation{
+    border-radius: 50%;
+    animation: ondas 5s infinite;
+}
+
+@keyframes ondas{
+    0%{
+        transform: scale(1);
+        background-color: black;
+    }
+    25%{
+        transform: scale(1.25);
+        background-color: blue;
+    }
+    50%{
+        transform: scale(1.5);
+        background-color: blueviolet;
+    }
+    75%{
+        transform: scale(1.25);
+        background-color: blue;
+    }
+    100%{
+        transform: scale(1);
+        background-color: black;
+    }
+}
+
+.panel{
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 300px;
+    height: 130vh;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+    z-index: 999;
+    transition: .5s;
+}
+
+.panel a{
+    display: block;
+    padding: 10px 30px;
+    margin: 24px 0;
+    width: 70%;
+    background: black;
+    color: white;
+}
+
+.panel.moverPanel{
+    left: 0px;
+}
+
+#modal{
+    width: 100%;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    background: #000000ab;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.cont-login{
+    padding: 50px 120px;
+    background: white;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.cont-login input{
+    display: block;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+.cont-login button{
+    background: black;
+    color: white;
+    padding: 10px 40px;
+}
+
+#cerrar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: #000000ab;
+    border: transparent;
+    font-size: 20px;
+}
+
+#modal.active{
+    display: flex;
+}
